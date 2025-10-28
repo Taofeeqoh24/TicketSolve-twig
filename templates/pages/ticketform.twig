@@ -1,0 +1,47 @@
+<div class="min-h-screen bg-gray-50 p-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="lg:text-3xl text-sm font-bold text-purple-800">
+        Ticket Management Screen
+      </h1>
+    </div>
+    <form id="ticketForm" class="flex flex-col gap-4 bg-white lg:p-6 p-1 rounded-lg shadow-md">
+      <div>
+        <label class="block font-semibold mb-1">
+          Title
+        </label>
+        <input type="text" id="title" placeholder="Enter ticket title" class="border border-gray-300 rounded p-2 w-full" />
+        <p id="error-title" class="text-red-500 text-sm mt-1"></p>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">
+          Description
+        </label>
+        <textarea id="description" placeholder="Describe the issue" class="border border-gray-300 rounded p-2 w-full"></textarea>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">
+          Status
+        </label>
+        <select id="status" class="border border-gray-300 rounded p-2 w-full">
+          <option value="" disabled selected>
+            Select status
+          </option>
+          <option value="open">
+            Open
+          </option>
+          <option value="in_progress">
+            In Progress
+          </option>
+          <option value="closed">
+            Closed
+          </option>
+        </select>
+        <p id="error-status" class="text-red-500 text-sm mt-1"></p>
+      </div>
+      <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-md">
+        Save Ticket
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title|default('TicketSolve') }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/css/style.css" >
+</head>
+<body>
+  {% block header %}
+  <div class="landing">
+    <header class="flex items-center justify-around p-5 shadow-md mx-auto bg-[#f6fafd]">
+      <h1 class='text-xl'>Ticket<span class='font-bold text-purple-800'>Solve</span></h1>
+      <nav class='hidden md:block lg:block'>
+        <ul class="flex gap-4">
+          <li>Product</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Company</li>
+        </ul>
+      </nav>
+      <div class="gap-2 flex">
+        <button 
+          class="px-6 py-2 bg-purple-500 text-white rounded-3xl text-sm font-bold"
+          onclick="window.location.href='index.php?page=login'"
+        >            
+          Login
+        </button>
+        <button 
+          class="px-4 py-2 text-purple-500 rounded-3xl text-sm font-bold border"
+          onclick="window.location.href='index.php?page=register'"
+        >
+          Get Started
+        </button>
+      </div>
+    </header>
+    {% endblock %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer class="flex items-center justify-center p-4 rounded-md shadow-md mx-auto text-white bg-gray-700 font-bold">
+      <aside class="text-center text-sm">
+        <p>Copyright &copy; Taofeeqoh 2025 - All Right Reserved</p>
+        <p>Designed for HNG 13 - Stage 2 Task</p>
+      </aside>
+    </footer>
+    {% endblock %}
+  </div>
+</body>
+</html>

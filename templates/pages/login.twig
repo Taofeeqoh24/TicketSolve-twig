@@ -1,0 +1,57 @@
+{% extends 'base.twig' %}
+
+{% block header %}{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center h-screen">
+  <div class="mx-auto p-10 bg-white rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-6 text-center">Login</h1>
+
+    <form
+      id="loginForm"
+      class="flex w-72 lg:w-96 flex-col gap-2 mx-auto"
+    >
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email address"
+        class="p-2 border border-gray-300 rounded"
+      />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        class="p-2 border border-gray-300 rounded"
+      />
+
+      <p id="error" class="text-red-500 mt-2"></p>
+
+      <button
+        type="submit"
+        class="p-2 bg-purple-500 rounded text-white font-bold"
+      >
+        Submit
+      </button>
+
+      <div class="text-center mt-2">
+        <p class="text-xs font-semibold">
+          Don't have an account?
+          <span
+            class="text-purple-800 font-bold hover:underline cursor-pointer"
+            onclick="window.location.href='index.php?page=register'"
+          >
+            Signup
+          </span>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/public/js/login.js"></script>
+{% endblock %}

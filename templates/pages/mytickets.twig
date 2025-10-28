@@ -1,0 +1,33 @@
+<div class="p-6">
+  <h1 class="text-3xl font-bold mb-6">My Tickets</h1>
+  <div id="ticketsContainer" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+  <!-- Modal -->
+  <div id="editModal" class="hidden fixed inset-0 bg-purple-300/50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-xl font-bold mb-4">Edit Ticket</h2>
+      <form id="editForm" class="flex flex-col gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Title</label>
+          <input type="text" id="editTitle" class="w-full border px-3 py-2 rounded" required />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Description</label>
+          <textarea id="editDescription" class="w-full border px-3 py-2 rounded" required></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Status</label>
+          <select id="editStatus" class="w-full border px-3 py-2 rounded">
+            <option value="open">Open</option>
+            <option value="in_progress">In Progress</option>
+            <option value="closed">Closed</option>
+          </select>
+        </div>
+        <div class="flex justify-end gap-2 mt-4">
+          <button type="button" id="cancelEdit" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

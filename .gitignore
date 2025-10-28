@@ -1,0 +1,19 @@
+# PHP stuff
+/vendor/
+/composer.lock
+
+# Node/Tailwind stuff
+/node_modules/
+/public/css/style.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and temp
+*.log
+*.tmp

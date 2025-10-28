@@ -1,0 +1,17 @@
+{
+    "name": "ticketsolve/twig-app",
+    "autoload": {
+        "psr-4": {
+            "Ticketsolve\\TwigApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Taofeeqoh24",
+            "email": "taofeeqohrabbit20@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.21"
+    }
+}
